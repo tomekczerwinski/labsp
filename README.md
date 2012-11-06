@@ -6,3 +6,11 @@ Laboratorium 2.
 
 ```sh
 tail -n 4 program.c
+
+
+Laboratorium 3.
+
+8.
+
+```sh
+find etc -type f -follow | wc -l
