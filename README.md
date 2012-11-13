@@ -21,9 +21,10 @@ cat plik.txt | tr " \t" "\n"
 
  ```sh
 find /etc/ -type f 2> errors | wc -l
-
+ ```
+ ```sh
 Do sprawdzenia błędów: cat errors
-```
+ ```
 
 * Zadanie 9. Zlicz ilosc znakow z 3 pierwszych lini pliku /etc/passwd.
 
