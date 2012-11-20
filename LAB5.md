@@ -1,6 +1,6 @@
 Zad. 1
 ```sh
-find ~/ -maxdepth 1 -mtime -10
+find ~/ -maxdepth 1 -type f -mtime -10
 ```
 
 Zad. 2
@@ -11,6 +11,7 @@ find  / -name \*config\* -type f 2> /dev/null
 Zad. 3
 ```sh
 find ~/ -atime 20
+find -mtime -20 | egrep -v "/.git"
 ```
 
 Zad. 4
