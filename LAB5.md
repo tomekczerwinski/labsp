@@ -11,6 +11,7 @@ find  / -name \*config\* -type f 2> /dev/null
 Zad. 3
 ```sh
 find ~/ -atime 20
+find -mtime -20 | egrep -v "/.git"
 ```
 
 Zad. 4
