@@ -27,3 +27,8 @@ cat /etc/passwd | sort -r --field-separator=":" -g -k 4,3
 ```sh
 find / -printf "%u\n" 2> /dev/null | sort | uniq -c
 ```
+
+* Zad. 7
+```sh
+find -printf "%m\n" | sort | uniq -c
+```
