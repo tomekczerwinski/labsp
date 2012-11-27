@@ -18,6 +18,7 @@ Zad. 4
 ```sh
 find /etc \( -type f -and -name a* \) -or \( -type d -and ! -empty \) 2> /dev/null
 ```
+(Polecenie nie do końca poprawne - w podkatalogach nie wyznacza plików rozpoczynających się na "a")
 
 Zad. 5
 ```sh
