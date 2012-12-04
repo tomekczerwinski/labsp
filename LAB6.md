@@ -27,9 +27,7 @@ grep -c /bash$ /etc/passwd
 ```sh
 grep [IVXLCDM] plik.txt
 ```
-
 or
-
 ```sh
 egrep -iw [IVXLCDM]+ plik.txt
 ```
