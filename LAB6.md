@@ -15,7 +15,7 @@ ls -l | egrep ^.{8}r
 
 * Zad. 4
 ```sh
-grep -c bash /etc/passwd
+grep -c /bash$ /etc/passwd
 ```
 
 * Zad. 5
