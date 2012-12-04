@@ -14,6 +14,11 @@ ls -l | egrep ^.{8}r
 ```
 
 * Zad. 4
+Pierwsze Rozwiązanie:
+```sh
+grep -c bash /etc/passwd
+```
+Drugie Dobre Rozwiązanie:
 ```sh
 grep -c /bash$ /etc/passwd
 ```
