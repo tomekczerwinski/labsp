@@ -10,7 +10,7 @@ grep ^[0-9] pl*
 
 * Zad. 3
 ```sh
-ls -1 | grep '^.{8}r'
+egrep '^.{8}r'
 ```
 
 * Zad. 4
