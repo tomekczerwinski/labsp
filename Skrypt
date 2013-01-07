@@ -2,7 +2,7 @@
 
 clear
 
-echo "Witaj w tekstowym wyłączniku."
+echo "Witaj w Detonatorze."
 echo "Wprowadź liczbę minut do odliczenia."
 echo -n "> "
 read ileminut
@@ -82,7 +82,7 @@ function list
 function pokaz
 {
 	clear
-	echo "Pozostało odliczania: $ilesekteraz sek. / $ilesekund sek. ($ileminut min.)"
+	echo "Pozostało: $ilesekteraz sek. / $ilesekund sek. ($ileminut min.)"
 	dodaj
 }
 
