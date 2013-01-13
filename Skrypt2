@@ -1,0 +1,18 @@
+#!/bin/bash
+echo ""
+echo "[ JAKĄ GRE URUCHOMIĆ? WYBIERZ CYFRĘ Z LISTY: ]"
+echo ""
+select l in SOLITARE GBRAINY MAHJONGG MINESWAPPER QUADRAPASSEL SUDOKU WYJŚCIE
+do
+  case "$l" in
+    "SOLITARE") /usr/games/sol ;;
+    "GBRAINY") gbrainy ;;
+    "MAHJONGG") /usr/games/mahjongg ;;
+    "MINESWAPPER") /usr/games/gnomine ;;
+    "QUADRAPASSEL") /usr/games/quadrapassel ;;
+    "SUDOKU") /usr/games/gnome-sudoku ;;
+    "WYJŚCIE") exit ;;
+    *) startx $@
+  esac
+break
+done
