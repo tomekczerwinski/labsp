@@ -12,6 +12,7 @@ do
     "FREECELL") /usr/games/sol --freecell ;;
     "SUDOKU") /usr/games/gnome-sudoku ;;
     "WYJŚCIE") exit ;;
+     *) echo "Błędny Wybór";;
   esac
 break
 done
