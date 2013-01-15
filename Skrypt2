@@ -2,14 +2,14 @@
 echo ""
 echo "[ JAKĄ GRE URUCHOMIĆ? WYBIERZ CYFRĘ Z LISTY: ]"
 echo ""
-select l in SOLITARE GBRAINY MAHJONGG MINESWAPPER QUADRAPASSEL SUDOKU WYJŚCIE
+select l in SOLITARE GOLLY MAHJONGG MINESWAPPER FREECELL SUDOKU WYJŚCIE
 do
   case "$l" in
     "SOLITARE") /usr/games/sol ;;
-    "GBRAINY") gbrainy ;;
+    "GOLLY") golly ;;
     "MAHJONGG") /usr/games/mahjongg ;;
     "MINESWAPPER") /usr/games/gnomine ;;
-    "QUADRAPASSEL") /usr/games/quadrapassel ;;
+    "FREECELL") /usr/games/sol --freecell ;;
     "SUDOKU") /usr/games/gnome-sudoku ;;
     "WYJŚCIE") exit ;;
   esac
