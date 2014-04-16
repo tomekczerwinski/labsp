@@ -75,3 +75,82 @@ do
 	leftname=`basename $file $1`
 	mv $file ${leftname}$2
 done
+
+
+
+
+##skrypt o dwóch argumentach, który sprawdza, czy w katalogach o pełnych
+## nazwach ścieżkowych $1 i $2 powtarza się jakaś nazwa pliku (i na końcu wyświetla
+##odpowiedni komunikat).
+
+opwd=$PWD
+jest="Nie ma"
+cd $1
+for plik1 in *; do
+   cd $2
+   for plik2 in *; do
+      if [ $plik1 == $plik2 ]
+      then jest="Jest"
+      fi
+   done
+done
+echo $jest
+cd $opwd
+exit 0
+
+
+
+#skrypt, który wyświetli nazwę i rozmiar tego pliku w bieżšcym katalogu,
+#który ma największy rozmiar.
+
+declare -i max rozmiar
+max=-1
+for plik in *
+do
+   rozmiar=`cat $plik|wc -c`
+   if [ $rozmiar -gt $max ]
+   then nazwa=$plik
+        max=$rozmiar
+   fi
+done
+echo $nazwa $max
+exit 0
+
+
+
+
+#Ponizszy skrypt sumuje jedynie rozmiary plikow zwyklych,
+#a nie uwzglednia rozmiarow samych katalogow
+
+declare -i suma=0
+
+sum() {
+   for plik in $(ls -A); do
+      if [ -d $plik ]
+      then cd $plik
+           sum
+           cd ..
+      else suma=suma+$(cat $plik|wc -c)
+      fi
+   done
+   return
+}
+
+opwd=$PWD
+cd $1
+sum
+cd $opwd
+echo "Suma rozmiarow: $suma"
+exit 0
+
+
+
+#skrypt o dwóch argumentach wywołania (pierwszym liczbowym, a drugim
+#napisowym), który $1 razy wywietli napis $2 (wskazówka: użyć nowszej formy
+#polecenia "for").
+
+declare -i k
+for ((k=0;k<$1;k++))
+   do echo $2
+done
+exit 0
