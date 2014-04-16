@@ -154,3 +154,14 @@ for ((k=0;k<$1;k++))
    do echo $2
 done
 exit 0
+
+
+
+##ILE W KATALODU PLIKÓW CO MINUTĘ
+
+
+while true
+do
+ls -1 | wc -l
+sleep 300
+done
